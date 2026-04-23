@@ -1,13 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <title>Your Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabrito's Cake House</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #E6C99F; /* Warm sand background */
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: transparent;
+        }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 0.9rem;
+        }
+        .login-btn {
+            background-color: #B27341;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            padding: 50px 10%;
+            align-items: center;
+            gap: 50px;
+        }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
+        .hero-text p { font-size: 1rem; margin-bottom: 30px; color: #555; }
+        .hero-image { flex: 1; text-align: right; }
+        .hero-image img { width: 100%; max-width: 450px; border-radius: 10px; }
+
+        .btn-group button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .view-more { background-color: #333; color: white; }
+        .order { background-color: white; border: 1px solid #ccc; }
+
+        /* Featured Section */
+        .featured { padding: 50px 10%; }
+        .featured h2 { font-size: 2rem; margin-bottom: 40px; }
+        .cake-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .cake-card { text-align: left; }
+        .cake-card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        .cake-card h3 { font-size: 0.9rem; margin-bottom: 5px; }
+        .cake-card p { font-size: 0.8rem; color: #666; }
+
+        footer {
+            padding: 20px 10%;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML5 template.</p>
+    <nav>
+        <div class="logo">Cabrito's Cake House</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Welcome to<br>Cabrito's Cake<br>House!</h1>
+            <p>Welcome to Cabrito's Cake House! Delicious handcrafted cakes made with love and the finest ingredients. From birthdays to weddings, we make every celebration sweeter.</p>
+            <div class="btn-group">
+                <button class="view-more">View More</button>
+                <button class="order">Order</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for the main chocolate cake slice -->
+            <img src="cake4.jpeg" alt="Delicious Chocolate Cake">
+        </div>
+    </header>
+
+    <section class="featured">
+        <h2>Featured Cakes</h2>
+        <div class="cake-grid">
+            <!-- Cake 1 -->
+            <div class="cake-card">
+                <img src="cake1.jpeg" alt="Strawberries & Whipped Cream">
+                <h3>Strawberries & Whipped Cream</h3>
+                <p>Light vanilla sponge topped with fresh berries and airy whipped cream.</p>
+            </div>
+            <!-- Cake 2 -->
+            <div class="cake-card">
+                <img src="cake2.jpeg" alt="Coffee and Walnut Cake ">
+                <h3>Coffee and Walnut Cake</h3>
+                <p>Rich espresso-infused sponge finished with crunchy walnuts and silk buttercream.</p>
+            </div>
+            <!-- Cake 3 -->
+            <div class="cake-card">
+                <img src="cake3.jpeg" alt="Red Velvet Cake">
+                <h3>Red Velvet Cake</h3>
+                <p>Velvet-smooth cocoa sponge layered with our signature tangy cream cheese frosting.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Created by Ralph Jaden Cabrito
+    </footer>
 
 </body>
 </html>
