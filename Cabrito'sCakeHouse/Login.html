@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cabrito's Cake House</title>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body class="auth-page">
+
+    <nav>
+        <div class="logo">
+            <img src="Logo.jpeg" alt="Cabrito's Cake House logo">
+            <span>Cabrito's Cake House</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Shop.html">Shop</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="Login.html" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <main class="login-layout">
+        <section class="login-promo">
+            <div class="promo-overlay"></div>
+            <div class="promo-content">
+                <span class="promo-badge">MEMBERS FIRST</span>
+                <h1>Reserve your sweets before they sell out.</h1>
+                <p>Login to place cake and drink orders, save your details, and return to the item you picked.</p>
+                <div class="promo-features">
+                    <span>Fresh cakes</span>
+                    <span>Cold drinks</span>
+                    <span>Fast pickup</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-card">
+            <div class="login-header">
+                <button class="login-tab active" type="button">Login</button>
+                <button class="login-tab disabled" type="button" disabled>Sign up</button>
+            </div>
+
+            <p class="shop-kicker option-kicker">Account access</p>
+            <h1>Login</h1>
+            <p class="auth-message" id="auth-message" aria-live="polite"></p>
+
+            <form id="login-form">
+                <label>
+                    Username
+                    <input type="text" name="username" placeholder="Enter your username" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" placeholder="Enter your password" required>
+                </label>
+                <label>
+                    Access type
+                    <select name="role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </label>
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="login-hint">
+                <p>User: <strong>user1</strong> / <strong>userpass3215</strong></p>
+                <p>Admin: <strong>admin</strong> / <strong>admin123</strong></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

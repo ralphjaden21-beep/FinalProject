@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History | Cabrito's Cake House</title>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body data-required-role="user">
+
+    <nav>
+        <div class="logo">
+            <img src="Logo.jpeg" alt="Cabrito's Cake House logo">
+            <span>Cabrito's Cake House</span>
+        </div>
+        <div class="nav-links">
+            <a href="User.html">Dashboard</a>
+            <a href="Shop.html">Order</a>
+            <a href="Profile.html">Profile Management</a>
+            <a href="#" class="logout-btn">Log out</a>
+        </div>
+    </nav>
+
+    <main class="access-page">
+        <section class="access-hero">
+            <p class="shop-kicker">Purchase history</p>
+            <h1>Your Orders</h1>
+            <p>Completed orders will appear here after checkout.</p>
+        </section>
+
+        <section class="history-list" id="history-list"></section>
+    </main>
+
+    <script src="access.js"></script>
+    <script src="auth.js"></script>
+    <script src="logout.js"></script>
+    <script src="purchase-history.js"></script>
+</body>
+</html>
