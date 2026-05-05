@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | Cabrito's Cake House</title>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body data-required-role="user">
+
+    <nav>
+        <div class="logo">
+            <img src="Logo.jpeg" alt="Cabrito's Cake House logo">
+            <span>Cabrito's Cake House</span>
+        </div>
+        <div class="nav-links">
+            <a href="User.html">Dashboard</a>
+            <a href="Shop.html">Shop</a>
+            <a href="Profile.html">Profile Management</a>
+            <a href="PurchaseHistory.html">Purchase History</a>
+            <a href="#" class="logout-btn">Log out</a>
+        </div>
+    </nav>
+
+    <main class="form-page">
+        <section class="order-summary">
+            <p class="shop-kicker">Order details</p>
+            <h1 id="order-product">Order Item</h1>
+            <p id="order-price">Base price: PHP 0</p>
+            <div id="customization-details" style="display: none; margin-top: 16px; padding: 12px; background: rgba(120, 65, 33, 0.08); border-radius: 8px; color: #5A321A; font-size: 0.95rem;"></div>
+        </section>
+
+        <section class="form-card">
+            <form id="order-form" class="detail-form">
+                <label>
+                    Size
+                    <select name="size" required>
+                        <option value="Small">Small</option>
+                        <option value="Medium" selected>Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                </label>
+                <label>
+                    Quantity
+                    <input type="number" name="quantity" min="1" value="1" required>
+                </label>
+                <label>
+                    Pickup / delivery date
+                    <input type="date" name="date" required>
+                </label>
+                <label>
+                    Special instructions
+                    <textarea name="instructions" rows="3" placeholder="Message, color, dedication, or delivery request"></textarea>
+                </label>
+
+                <div class="total-box">
+                    <span>Total</span>
+                    <strong id="order-total">PHP 0</strong>
+                </div>
+
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="access.js"></script>
+    <script src="auth.js"></script>
+    <script src="logout.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>

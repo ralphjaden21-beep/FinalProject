@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Cabrito's Cake House</title>
+    <link rel="stylesheet" href="general.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="Logo.jpeg" alt="Cabrito's Cake House logo">
+            <span>Cabrito's Cake House</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Shop.html">Shop</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact Us</a>
+            <a href="Login.html" class="login-btn">Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="shop-hero">
+            <div>
+                <p class="shop-kicker">Fresh from the bakery</p>
+                <h1>Shop Our Cakes</h1>
+                <p>Choose from our handcrafted favorites, baked fresh for birthdays, family celebrations, and sweet everyday cravings.</p>
+            </div>
+        </section>
+
+        <section class="shop-section">
+            <div class="shop-heading">
+                <div>
+                    <p class="shop-kicker">Available today</p>
+                    <h2>Signature Cakes</h2>
+                </div>
+                <button id="custom-order-btn" class="shop-order-link">Custom order</button>
+            </div>
+
+            <div class="shop-grid" id="cakes-grid">
+                <!-- Cakes will be loaded here -->
+            </div>
+        </section>
+
+        <section class="shop-section">
+            <div class="shop-heading">
+                <div>
+                    <p class="shop-kicker">Cool refreshments</p>
+                    <h2>Drinks</h2>
+                </div>
+            </div>
+
+            <div class="shop-grid drinks-grid" id="drinks-grid">
+                <!-- Drinks will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="Logo.jpeg" alt="Cabrito's Cake House logo">
+            </div>
+
+            <div class="footer-info">
+                <p>Company Phone Number:+63 8176631891 </p>
+                <div class="footer-social">
+                    <h3>Connect with us!</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon instagram" aria-label="Instagram"></a>
+                        <a href="#" class="social-icon facebook" aria-label="Facebook"></a>
+                        <a href="#" class="social-icon youtube" aria-label="YouTube"></a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Notice</a>
+            </div>
+            <p>All Rights Reserved. Cabrito's Cake House, 2020</p>
+        </div>
+    </footer>
+
+    <!-- Cake Customization Modal -->
+    <div id="customize-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Customize Your Cake</h2>
+                <button type="button" class="modal-close" id="customize-close">&times;</button>
+            </div>
+            <form id="customize-form">
+                <div class="form-group">
+                    <label for="cake-name">Selected Cake:</label>
+                    <input type="text" id="cake-name" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="frosting-flavor">Frosting Flavor:</label>
+                    <select id="frosting-flavor" required>
+                        <option value="">-- Select Frosting --</option>
+                        <option value="vanilla">Vanilla Buttercream</option>
+                        <option value="chocolate">Chocolate Buttercream</option>
+                        <option value="cream-cheese">Cream Cheese</option>
+                        <option value="salted-caramel">Salted Caramel</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="lemon">Lemon Zest</option>
+                        <option value="original">Original (No Change) - Free</option>
+                    </select>
+                    <small>+PHP 100 for frosting change (except Original)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="filling-flavor">Cake Filling:</label>
+                    <select id="filling-flavor" required>
+                        <option value="">-- Select Filling --</option>
+                        <option value="original">Original Filling</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="mango">Mango</option>
+                        <option value="cheese">Cheese</option>
+                        <option value="salted-caramel">Salted Caramel</option>
+                    </select>
+                    <small>+PHP 80 for filling change (except Original)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="decorations">Decorations:</label>
+                    <select id="decorations" required>
+                        <option value="">-- Select Decoration --</option>
+                        <option value="basic">Basic (Plain) - Free</option>
+                        <option value="sprinkles">Colorful Sprinkles</option>
+                        <option value="chocolate-shavings">Chocolate Shavings</option>
+                        <option value="fresh-berries">Fresh Berries</option>
+                        <option value="edible-flowers">Edible Flowers</option>
+                        <option value="pearl-balls">Pearl Balls</option>
+                    </select>
+                    <small>+PHP 150 for decorations (except Basic)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Cake Message/Writing:</label>
+                    <input type="text" id="message" placeholder="e.g., Happy Birthday Sarah!" maxlength="50">
+                    <small>+PHP 50 for personalized message</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cake-size">Cake Size:</label>
+                    <select id="cake-size" required>
+                        <option value="small">Small (4-6 people) - +PHP 100</option>
+                        <option value="medium" selected>Medium (6-10 people) - Standard</option>
+                        <option value="large">Large (10-15 people) - +PHP 200</option>
+                    </select>
+                </div>
+
+                <div class="customization-summary">
+                    <h3>Summary</h3>
+                    <p>Base Price: <strong id="base-price">PHP 0</strong></p>
+                    <p>Customization Charge: <strong id="custom-charge">PHP 0</strong></p>
+                    <hr>
+                    <p>Total: <strong id="custom-total">PHP 0</strong></p>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="customize-cancel" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Add to Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>
